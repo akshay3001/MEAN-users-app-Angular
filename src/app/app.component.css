@@ -1,6 +1,12 @@
 .main-section{
     background-image: url('../assets/images/bg-01.jpg');
     background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-position: center;
 }
+
