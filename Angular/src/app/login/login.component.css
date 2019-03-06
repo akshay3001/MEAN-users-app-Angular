@@ -1,0 +1,10 @@
+.login-box{
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-form{
+    margin: 0 auto;
+}
