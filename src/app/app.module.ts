@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FieldComponent } from './field.component';
 import { SignupComponent } from './signup/signup.component';
+import { VendorDashboardComponent } from './vendor-dashboard/vendor-dashboard.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SignupComponent } from './signup/signup.component';
     AppComponent,
     LoginComponent,
     FieldComponent,
-    SignupComponent
+    SignupComponent,
+    VendorDashboardComponent
   ],
   imports: [
     BrowserModule,
