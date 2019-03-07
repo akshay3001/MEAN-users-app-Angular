@@ -1,4 +1,5 @@
-<section class="login-box">
+<section class="main-section">
+  <div class="login-box">
     <!-- Component Header -->
     <header class="cen">
       <h2 class="login-heading m-t-none p-md-b">Login</h2>
@@ -25,6 +26,7 @@
       <!-- Login Button -->
       <div class="cen">
         <button mat-flat-button color="primary" (click)="login(loginData)">Login</button>
+        <button mat-flat-button color="primary" routerLink="/vendorDashboard">Bypass</button>
       </div>
     </form>
     <footer class="cen p-md">
@@ -32,4 +34,5 @@
         Sign Up
       </a>
     </footer>
+  </div>
 </section>

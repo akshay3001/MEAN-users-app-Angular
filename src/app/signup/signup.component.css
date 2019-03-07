@@ -19,6 +19,18 @@
 }
 
 /* Signup Form styles */
+.main-section{
+    align-items: center;
+    background-image: url('../../assets/images/bg-01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
 .input-width {
     width: 100%;
 }
