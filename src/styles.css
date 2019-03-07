@@ -9,6 +9,7 @@ html, body {
 }
 
 /* Delcaring resubale variables */
+
 :root {
     --white-bg: #fff;
 }
@@ -207,7 +208,7 @@ html, body {
 
 .m-l-xl {
     margin-left: 40px;
-} 
+}
 
 .m-l-n-xxs {
     margin-left: -1px;
@@ -435,7 +436,12 @@ html, body {
     min-width: 120px;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
 /* Flexbox */
+
 .cen {
     display: flex;
     justify-content: center;
