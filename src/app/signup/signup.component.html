@@ -3,31 +3,43 @@
   <header>
     <h2 class="signup-heading m-t-none p-md-b">Register</h2>
   </header>
-  <form name="registrationForm">
+  <form [formGroup]="signupform" name="registrationForm">
     <!-- Username input field -->
     <div>
       <mat-form-field class="input-width">
-        <input matInput name="username" placeholder="Name" [(ngModel)]="user.username" required>
+        <input matInput name="username" placeholder="Name" [(ngModel)]="user.username" formControlName="name">
+        <mat-error *ngIf="signupform.controls['name'].hasError('pattern') && !signupform.controls['name'].hasError('required')">
+          Name must contain more than 3 alphabets only
+        </mat-error>
+        <mat-error *ngIf="signupform.controls['name'].hasError('required')">
+          Name is required
+        </mat-error>
       </mat-form-field>
       <!-- Email input field -->
       <mat-form-field class="input-width">
-        <input matInput name="email" type="email" placeholder="Email" [formControl]="emailFormControl" required>
-        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        <input matInput name="email" type="email" placeholder="Email" formControlName='email' required>
+        <mat-error *ngIf="signupform.controls['email'].hasError('email') && !signupform.controls['email'].hasError('required')">
           Please enter a valid email address
         </mat-error>
-        <mat-error *ngIf="emailFormControl.hasError('required')">
-          Email is <strong>required</strong>
+        <mat-error *ngIf="signupform.controls['email'].hasError('required')">
+          Email is required
         </mat-error>
       </mat-form-field>
     </div>
     <!-- Password input field -->
     <div>
       <mat-form-field class="input-width">
-        <input matInput name="password" type="password" placeholder="Password" [(ngModel)]="user.password" required>
+        <input matInput name="password" type="password" placeholder="Password" [(ngModel)]="user.password" formControlName='password'>
+        <mat-error *ngIf="signupform.controls['password'].hasError('required')">
+          Please enter password
+        </mat-error>
       </mat-form-field>
       <!-- Confirm password field -->
       <mat-form-field class="p-md-b input-width">
-        <input matInput name="confirm" type="password" placeholder="Confirm Password" [(ngModel)]="confirm" required>
+        <input matInput name="confirm" type="password" placeholder="Confirm Password" [(ngModel)]="confirm" formControlName='confirm'>
+        <mat-error *ngIf="signupform.controls['confirm'].hasError('passMatch')">
+          Passwords must match
+        </mat-error>
       </mat-form-field>
     </div>
     <!-- Register button -->
