@@ -3,29 +3,28 @@
     <header class="cen">
       <h2 class="login-heading m-t-none p-md-b">Login</h2>
     </header>
-    <form name="loginForm">
+    <form [formGroup]="loginform" name="loginForm">
       <!-- Username input field -->
       <mat-form-field class="input-width">
-        <input matInput type="email" name="username" placeholder="Email" [(ngModel)]="username" [formControl]="usernameControl"
-          required>
-        <mat-error *ngIf="usernameControl.hasError('email') && !usernameControl.hasError('required')">
+        <input matInput type="email" name="username" placeholder="Email" [(ngModel)]="loginData.username" formControlName="username">
+        <mat-error *ngIf="loginform.controls['username'].hasError('email') && !loginform.controls['username'].hasError('required')">
           Please enter a valid email address
         </mat-error>
-        <mat-error *ngIf="usernameControl.hasError('required')">
+        <mat-error *ngIf="loginform.controls['username'].hasError('required')">
           Username is required
         </mat-error>
       </mat-form-field>
       <!-- Password input field -->
       <mat-form-field class="input-width p-md-b">
-        <input matInput name="password" type="password" placeholder="Password" [(ngModel)]="password"
-          [formControl]="passwordControl" required>
-        <mat-error *ngIf="passwordControl.hasError('required')">
-          Password is <strong>required</strong>
+        <input matInput name="password" type="password" placeholder="Password" [(ngModel)]="loginData.password"
+          formControlName="password">
+        <mat-error *ngIf="!loginform.controls['password'].required">
+          Password is required
         </mat-error>
       </mat-form-field>
       <!-- Login Button -->
       <div class="cen">
-        <button mat-flat-button color="primary" (click)="login(username,password)">Login</button>
+        <button mat-flat-button color="primary" (click)="login(loginData)">Login</button>
       </div>
     </form>
     <footer class="cen p-md">
