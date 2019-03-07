@@ -1,14 +1,13 @@
 <section class="signup-box">
-  <div class="p-sm">
-    <!-- Component Header -->
-    <header>
-      <h2 class="signup-heading m-t-none p-md-b">Register</h2>
-    </header>
-    <form name="registrationForm">
-      <!-- Username input field -->
+  <!-- Component Header -->
+  <header>
+    <h2 class="signup-heading m-t-none p-md-b">Register</h2>
+  </header>
+  <form name="registrationForm">
+    <!-- Username input field -->
+    <div>
       <mat-form-field class="input-width">
-        <input matInput name="username" [formControl]="usernameFormControl" placeholder="Name"
-          [(ngModel)]="user.username" required>
+        <input matInput name="username" placeholder="Name" [(ngModel)]="user.username" required>
       </mat-form-field>
       <!-- Email input field -->
       <mat-form-field class="input-width">
@@ -20,7 +19,9 @@
           Email is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-      <!-- Password input field -->
+    </div>
+    <!-- Password input field -->
+    <div>
       <mat-form-field class="input-width">
         <input matInput name="password" type="password" placeholder="Password" [(ngModel)]="user.password" required>
       </mat-form-field>
@@ -28,15 +29,15 @@
       <mat-form-field class="p-md-b input-width">
         <input matInput name="confirm" type="password" placeholder="Confirm Password" [(ngModel)]="confirm" required>
       </mat-form-field>
-      <!-- Register button -->
-      <div class="cen">
-        <button mat-flat-button color="primary" class="login-button" (click)="register(user)">Register</button>
-      </div>
-    </form>
-    <footer class="cen p-md">
-      <a mat-button class="no-style" routerLink="/login">
-        Sign In
-      </a>
-    </footer>
-  </div>
+    </div>
+    <!-- Register button -->
+    <div class="cen">
+      <button mat-flat-button color="primary" class="login-button" (click)="register(user)">Register</button>
+    </div>
+  </form>
+  <footer class="cen p-md">
+    <a mat-button class="no-style" routerLink="/login">
+      Sign In
+    </a>
+  </footer>
 </section>

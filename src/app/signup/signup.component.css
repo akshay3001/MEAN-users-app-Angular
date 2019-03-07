@@ -15,15 +15,16 @@
 .signup-heading {
     font-size: 36px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
 }
 
 /* Signup Form styles */
 .input-width {
     width: 100%;
 }
+
+
+/* Signup Footer sytles */
 .no-style {
     text-decoration: none;
 }
-
-/* Signup Footer sytles */

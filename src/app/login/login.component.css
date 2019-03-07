@@ -15,15 +15,15 @@
 .login-heading {
     font-size: 36px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
 }
 
 /* Login Form styles */
 .input-width {
     width: 100%;
 }
+
+/* Login Footer sytles */
 .no-style {
     text-decoration: none;
 }
-
-/* Login Footer sytles */
