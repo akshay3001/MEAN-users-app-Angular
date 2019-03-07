@@ -1,0 +1,29 @@
+/****** Signup component specific styling ******/
+
+/* Signup component variables */
+
+/* Signup component box */
+.signup-box {
+    align-items: center;
+    background: var(--white-bg);
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+/* Signup Header styles */
+.signup-heading {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Signup Form styles */
+.input-width {
+    width: 100%;
+}
+.no-style {
+    text-decoration: none;
+}
+
+/* Signup Footer sytles */

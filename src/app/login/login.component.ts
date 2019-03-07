@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   
 
-    login(username, password: string) {
+    login(username: String, password: String) {
       alert('Username is ' + username + ' Password is ' + password);
     }
   }
